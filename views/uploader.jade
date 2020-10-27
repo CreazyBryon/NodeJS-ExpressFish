@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p My Up to #{title}
+  form(role="form", action="/upload", method="post", enctype="multipart/form-data")
+    div(class="form-group")
+      label(for="sampleFile") Upload ONIX File        
+      input(type="file", name="sampleFile", id="sampleFile")
+      input(type="submit", value="Sub")
